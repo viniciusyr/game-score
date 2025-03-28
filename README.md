@@ -3,14 +3,14 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
 
-## 🚀 Technologies Used
+## Technologies Used
 
-- **Angular** 🔥
+- **Angular** 
 - **TypeScript**
 - **SCSS**
-- **Material Design (Angular Material)**
+- **Material Design**
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository**:
    ```sh
