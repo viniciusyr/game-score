@@ -1,1 +1,35 @@
-<p>game-details works!</p>
+<h2 mat-dialog-title>
+    <div class="detail-container">
+        Game Details
+    </div>
+</h2>
+<mat-dialog-content class="game-details">
+    <div class="team-container">
+        <span class="team-name">{{ data.team1Data.name }}</span>
+        <div class="stat"><span class="stat-name">Goals:</span> <span>{{ data.team1Data.goals }}</span></div>
+        <div class="stat"><span class="stat-name">Shots:</span> <span>{{ data.team1Data.shots }}</span></div>
+        <div class="stat"><span class="stat-name">Possession:</span> <span>{{ data.team1Data.possession }}</span></div>
+        <div class="stat"><span class="stat-name">Corner:</span> <span>{{ data.team1Data.corner }}</span></div>
+        <div class="stat"><span class="stat-name">Fouls:</span> <span>{{ data.team1Data.fouls }}</span></div>
+        <div class="stat"><span class="stat-name">Offside:</span> <span>{{ data.team1Data.offsides }}</span></div>
+        <div class="stat"><span class="stat-name">Yellow:</span> <span>{{ data.team1Data.yellow }}</span></div>
+        <div class="stat"><span class="stat-name">Red:</span> <span>{{ data.team1Data.red }}</span></div>
+    </div>
+
+    <div class="team-container">
+        <span class="team-name">{{ data.team2Data.name }}</span>
+        <div class="stat"><span class="stat-name">Goals:</span> <span>{{ data.team2Data.goals }}</span></div>
+        <div class="stat"><span class="stat-name">Shots:</span> <span>{{ data.team2Data.shots }}</span></div>
+        <div class="stat"><span class="stat-name">Possession:</span> <span>{{ data.team2Data.possession }}</span></div>
+        <div class="stat"><span class="stat-name">Corner:</span> <span>{{ data.team2Data.corner }}</span></div>
+        <div class="stat"><span class="stat-name">Fouls:</span> <span>{{ data.team2Data.fouls }}</span></div>
+        <div class="stat"><span class="stat-name">Offside:</span> <span>{{ data.team2Data.offsides }}</span></div>
+        <div class="stat"><span class="stat-name">Yellow:</span> <span>{{ data.team2Data.yellow }}</span></div>
+        <div class="stat"><span class="stat-name">Red:</span> <span>{{ data.team2Data.red }}</span></div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="detail-container">
+        <button mat-button (click)="close()">Close</button>
+    </div>
+</mat-dialog-actions>

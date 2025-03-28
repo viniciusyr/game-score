@@ -13,23 +13,47 @@ export class GameScoreComponent {
   hover = false;
 
   team1 = {
-    name: 'Corinthians', 
+    name: 'CORINTHIANS', 
     score: 1, 
-    logo: 'https://img.icons8.com/color/48/corinthians.png'
+    logo: 'https://cdn.freebiesupply.com/logos/large/2x/corinthians-logo-png-transparent.png'
   }
 
   team2 = {
-    name: 'Chelsea', 
+    name: 'CHELSEA', 
     score: 0, 
-    logo: 'https://img.icons8.com/color/48/chelsea-fc.png'
+    logo: 'https://upload.wikimedia.org/wikipedia/hif/0/0d/Chelsea_FC.png?20150523181450'
   }
 
   constructor(public dialog: MatDialog) {}
 
-  teamDescription(){
+  openGameDetail(){
     this.dialog.open(GameDetailsComponent, {
-      width: '480px',
-      data: {test: 'test'}
+      width: '400px',
+      data: {
+        team1Data: {
+          name: 'COR',
+          goals: '1',
+          shots: '11',
+          possession: '46%',
+          corner: '4',
+          fouls: '17',
+          offsides: '1',
+          yellow: '1',
+          red: '0'
+         },
+       team2Data: {
+         name: 'CHE',
+         goals: '0',
+         shots: '14',
+         possession: '54%',
+         corner: '2',
+         fouls: '12',
+         offsides: '4',
+         yellow: '1',
+         red: '1'
+       }
+      }
+      
     })
     console.log('Team description!');
   }
