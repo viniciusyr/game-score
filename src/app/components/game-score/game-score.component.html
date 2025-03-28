@@ -1,12 +1,24 @@
 <mat-card class="game-card" (mouseover)="hover = true" (mouseleave)="hover = false" [ngClass]="{ 'hovered': hover }">
   <div class="team-info">
-    <img [src]="team1.logo" alt="{{ team1.name }} logo" class="team-logo">
-    <span class="team-name">{{ team1.name }}</span>
-    <span class="score">{{ team1.score }}</span>
-    <span>-</span>
-    <span class="score">{{ team2.score }}</span>
-    <span class="team-name">{{ team2.name }}</span>
-    <img [src]="team2.logo" alt="{{ team2.name }} logo" class="team-logo">
+    <div class="team-container">
+      <div class="team-left">
+        <img [src]="team1.logo" alt="{{ team1.name }} logo" class="team-logo">
+        <span class="team-name">{{ team1.name }}</span>
+      </div>
+    </div>
+    <div class="team-container">
+      <div class="score-section">
+        <span class="score">{{ team1.score }}</span>
+        <span class="separator"> FT </span>
+        <span class="score">{{ team2.score }}</span>
+      </div>
+    </div>
+    <div class="team-container">
+      <div class="team-right">
+        <span class="team-name">{{ team2.name }}</span>
+        <img [src]="team2.logo" alt="{{ team2.name }} logo" class="team-logo">
+      </div>
+    </div>
   </div>
-  <button mat-button color="primary" (click)="teamDescription()">Team Description</button>
+  <button mat-button color="primary" (click)="openGameDetail()">Game Details</button>
 </mat-card>
